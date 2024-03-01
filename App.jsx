@@ -1,5 +1,6 @@
 // App.java
 
+import React, { useState } from 'react';
 import React from 'react';
 import {
   SafeAreaView,
@@ -15,6 +16,12 @@ class App extends React.Component {
   render() {
     const isDarkMode = useColorScheme() === 'dark';
 
+    const [tasks, setTasks] = useState([
+        'Do laundry',
+        'Go to gym',
+        'Walk dog'
+      ]);
+
     const backgroundStyle = {
       backgroundColor: isDarkMode ? '#000' : '#fff',
     };
@@ -25,7 +32,7 @@ class App extends React.Component {
           barStyle={isDarkMode ? 'light-content' : 'dark-content'}
           backgroundColor={backgroundStyle.backgroundColor}
         />
-        <ToDoList />
+        <ToDoList tasks={tasks} />
         <ToDoForm />
       </SafeAreaView>
     );
