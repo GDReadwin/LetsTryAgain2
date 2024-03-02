@@ -1,7 +1,4 @@
-// App.java
-
 import React, { useState } from 'react';
-import React from 'react';
 import {
   SafeAreaView,
   StatusBar,
@@ -9,34 +6,32 @@ import {
   useColorScheme,
 } from 'react-native';
 
-import ToDoList from './ToDoList';
-import ToDoForm from './ToDoForm';
+import ToDoList from './ToDoList'; // Correct import path for ToDoList component
+import ToDoForm from './ToDoForm'; // Correct import path for ToDoForm component
 
-class App extends React.Component {
-  render() {
-    const isDarkMode = useColorScheme() === 'dark';
+const App = () => {
+  const isDarkMode = useColorScheme() === 'dark';
 
-    const [tasks, setTasks] = useState([
-        'Do laundry',
-        'Go to gym',
-        'Walk dog'
-      ]);
+  const [tasks, setTasks] = useState([
+    'Do laundry',
+    'Go to gym',
+    'Walk dog'
+  ]);
 
-    const backgroundStyle = {
-      backgroundColor: isDarkMode ? '#000' : '#fff',
-    };
+  const backgroundStyle = {
+    backgroundColor: isDarkMode ? '#000' : '#fff',
+  };
 
-    return (
-      <SafeAreaView style={backgroundStyle}>
-        <StatusBar
-          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-          backgroundColor={backgroundStyle.backgroundColor}
-        />
-        <ToDoList tasks={tasks} />
-        <ToDoForm />
-      </SafeAreaView>
-    );
-  }
+  return (
+    <SafeAreaView style={backgroundStyle}>
+      <StatusBar
+        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+        backgroundColor={backgroundStyle.backgroundColor}
+      />
+      <ToDoList tasks={tasks} />
+      <ToDoForm />
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
