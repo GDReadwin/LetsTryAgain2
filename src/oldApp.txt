@@ -40,7 +40,7 @@ const App = () => {
 
 const addTask = ( taskText ) => {
     setTasks([...tasks, taskText]); ///"..." is called spread
-  
+
   //tasks.push(task);
   //setTasks(tasks); is a second option
 
