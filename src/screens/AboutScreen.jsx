@@ -5,25 +5,25 @@ import MainLayout from '../layouts/MainLayout';
 const About = ({ navigation }) => {
  const appName = 'ToDo App (Lets Try Again)';
  const developerName = 'Your Name';
- const currentDate = new Date().toLocaleDateString();
+ const currentDate = new Date().toDateString();
 
  const AboutScreen = () => {
  return (
   <MainLayout>
-    <View>
-      <Text>App Name: {appName}</Text>
-      <Text>Developer: {developerName}</Text>
-      <Text>Current Date: {currentDate}</Text>
-      <Button
-          title="Go to Home"
-          onPress={() => navigation.navigate('Home')}
-      />
-    </View>
-    </MainLayout>
+  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <Text style={{ fontSize: 24, marginBottom: 10 }}>{appName}</Text>
+    <Text style={{ fontSize: 18, marginBottom: 5 }}>Made by {developerName}!</Text>
+    <Text style={{ fontSize: 16 }}>Today is {currentDate}</Text>
+    <Button
+      title="Go to Home"
+      onPress={() => navigation.navigate('Home')} 
+    />
+  </View>
+</MainLayout>
  );
 };
 
-return <AboutScreen />;
+  return <AboutScreen />;
 };
 
 export default About;
