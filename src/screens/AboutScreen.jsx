@@ -4,7 +4,7 @@ import MainLayout from '../layouts/MainLayout';
 
 const About = ({ navigation }) => {
  const appName = 'ToDo App (Lets Try Again)';
- const developerName = 'Your Name';
+ const developerName = 'Desmond Readwin';
  const currentDate = new Date().toDateString();
 
  const AboutScreen = () => {

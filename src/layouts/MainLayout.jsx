@@ -6,7 +6,7 @@ const MainLayout = ({ children }) => {
     <View style={styles.container}>
       {children}
       <View style={styles.footer}>
-        <Text style={styles.footerText}>This is the lab assignemnt 5 app.</Text>
+        <Text style={styles.footerText}>This is the lab assignment 5 app.</Text>
       </View>
     </View>
   );
