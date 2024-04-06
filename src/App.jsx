@@ -21,5 +21,4 @@ function App() {
 
 
 export default App;
-
-
+// Path: src/screens/AboutScreen.jsx

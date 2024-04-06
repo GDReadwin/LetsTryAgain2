@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import { View, TextInput, Button, Text } from 'react-native';
 
-function ToDoForm({ addTask, styles, tasks }) {
+export default function ToDoForm({ addTask, styles, tasks }) {
   const [taskText, setTaskText] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -32,5 +32,3 @@ function ToDoForm({ addTask, styles, tasks }) {
       </View>
     );
   }
-
-export default ToDoForm;

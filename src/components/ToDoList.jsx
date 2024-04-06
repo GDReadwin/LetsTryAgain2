@@ -7,7 +7,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
-function ToDoList ({ tasks }) {
+export default function ToDoList ({ tasks }) {
 
 const styles = StyleSheet.create({
     task: {
@@ -33,6 +33,3 @@ return (
     </View>
   );
 }
-
-
-export default ToDoList;
